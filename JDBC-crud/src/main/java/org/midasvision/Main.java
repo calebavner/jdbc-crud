@@ -34,5 +34,11 @@ public class Main {
         Seller newSeller = new Seller(null, "Pedro Paulo", "pedro@email.com", new Date(), 4000D, dep);
         sellerDao.insert(newSeller);
         System.out.println("Success! ID generated: " + newSeller.getId());
+
+        System.out.println("\n*** Teste: insert");
+        seller = sellerDao.findById(1);
+        seller.setName("Camila Santos");
+        sellerDao.update(seller);
+        System.out.println("Success! Update Completed");
     }
 }
