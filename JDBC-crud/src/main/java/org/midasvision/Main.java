@@ -35,10 +35,14 @@ public class Main {
         sellerDao.insert(newSeller);
         System.out.println("Success! ID generated: " + newSeller.getId());
 
-        System.out.println("\n*** Teste: insert");
+        System.out.println("\n*** Teste: update");
         seller = sellerDao.findById(1);
         seller.setName("Camila Santos");
         sellerDao.update(seller);
         System.out.println("Success! Update Completed");
+
+        System.out.println("\n*** Teste: delete");
+        sellerDao.deleteById(9);
+        System.out.println("Success! Delete Completed");
     }
 }
