@@ -5,6 +5,7 @@ import org.midasvision.model.Seller;
 import org.midasvision.model.dao.DaoFactory;
 import org.midasvision.model.dao.SellerDao;
 
+import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -28,5 +29,10 @@ public class Main {
         System.out.println("Numero de registros: " + list.size());
         for(Seller s : list)
             System.out.println(s);
+
+        System.out.println("\n*** Teste: insert");
+        Seller newSeller = new Seller(null, "Pedro Paulo", "pedro@email.com", new Date(), 4000D, dep);
+        sellerDao.insert(newSeller);
+        System.out.println("Success! ID generated: " + newSeller.getId());
     }
 }
