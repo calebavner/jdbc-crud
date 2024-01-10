@@ -22,5 +22,11 @@ public class Main {
         System.out.println("Numero de registros: " + list.size());
         for(Seller s : list)
             System.out.println(s);
+
+        System.out.println("\n*** Teste: findAll");
+        list = sellerDao.findAll();
+        System.out.println("Numero de registros: " + list.size());
+        for(Seller s : list)
+            System.out.println(s);
     }
 }
