@@ -8,7 +8,7 @@ import org.midasvision.model.dao.SellerDao;
 import java.util.Date;
 import java.util.List;
 
-public class Main {
+public class MainSeller {
     public static void main(String[] args) {
 
         SellerDao sellerDao = DaoFactory.createSellerDao();
